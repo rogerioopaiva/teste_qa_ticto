@@ -1,0 +1,672 @@
+[
+  {
+    "description": "    Eu como usuario\n    Desejo prencher o formulario\n    Para realizar meu cadastro",
+    "elements": [
+      {
+        "description": "",
+        "keyword": "Contexto",
+        "line": 8,
+        "name": "Realizar Cadastro",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que eu acesso a página da aplicação",
+            "result": {
+              "duration": 4310000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "description": "",
+        "id": "cadastrar-usuario;verificar-se-a-pagina-foi-carregada-corretamente",
+        "keyword": "Cenario",
+        "line": 11,
+        "name": "Verificar se a pagina foi carregada corretamente",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "line": 12,
+            "name": "a página estiver carregada",
+            "result": {
+              "duration": 253000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "line": 13,
+            "name": "devo ver o título do formulário",
+            "result": {
+              "duration": 292000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "keyword": "Contexto",
+        "line": 8,
+        "name": "Realizar Cadastro",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que eu acesso a página da aplicação",
+            "result": {
+              "duration": 1234000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "description": "",
+        "id": "cadastrar-usuario;tentar-realizar-cadastro-com-nome-invalido",
+        "keyword": "Cenario",
+        "line": 15,
+        "name": "Tentar realizar cadastro com nome invalido",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "line": 16,
+            "name": "informo o nome inválido",
+            "result": {
+              "duration": 5090000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "line": 17,
+            "name": "devo receber uma mensagem de erro no campo nome",
+            "result": {
+              "duration": 302000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "keyword": "Contexto",
+        "line": 8,
+        "name": "Realizar Cadastro",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que eu acesso a página da aplicação",
+            "result": {
+              "duration": 1456000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "description": "",
+        "id": "cadastrar-usuario;tentar-realizar-cadastro-com-email-invalido",
+        "keyword": "Cenario",
+        "line": 19,
+        "name": "Tentar realizar cadastro com email invalido",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "line": 20,
+            "name": "informo o email inválido",
+            "result": {
+              "duration": 3893000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "line": 21,
+            "name": "devo receber uma mensagem de erro no campo email",
+            "result": {
+              "duration": 764000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "keyword": "Contexto",
+        "line": 8,
+        "name": "Realizar Cadastro",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que eu acesso a página da aplicação",
+            "result": {
+              "duration": 1247000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "description": "",
+        "id": "cadastrar-usuario;tentar-realizar-cadastro-com-senha-invalida",
+        "keyword": "Cenario",
+        "line": 23,
+        "name": "Tentar realizar cadastro com senha invalida",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "line": 24,
+            "name": "informo a senha inválida",
+            "result": {
+              "duration": 4082000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "line": 25,
+            "name": "devo receber uma mensagem de erro no campo senha",
+            "result": {
+              "duration": 182000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "keyword": "Contexto",
+        "line": 8,
+        "name": "Realizar Cadastro",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que eu acesso a página da aplicação",
+            "result": {
+              "duration": 1164000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "description": "",
+        "id": "cadastrar-usuario;realizar-cadastro",
+        "keyword": "Cenario",
+        "line": 27,
+        "name": "Realizar cadastro",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "line": 28,
+            "name": "informo meus dados corretamente",
+            "result": {
+              "duration": 5486000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "line": 29,
+            "name": "meu cadastro deve ser realizado com sucesso",
+            "result": {
+              "duration": 692000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "keyword": "Contexto",
+        "line": 8,
+        "name": "Realizar Cadastro",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que eu acesso a página da aplicação",
+            "result": {
+              "duration": 1125000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "description": "",
+        "id": "cadastrar-usuario;verificar-se-na-lista-contém-os-dados-cadastrados",
+        "keyword": "Cenario",
+        "line": 31,
+        "name": "Verificar se na lista contém os dados cadastrados",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "line": 32,
+            "name": "acesso a área de usuários já cadastrados",
+            "result": {
+              "duration": 169000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "line": 33,
+            "name": "devo conseguir localizar os dados que cadastrei",
+            "result": {
+              "duration": 1644000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "keyword": "Contexto",
+        "line": 8,
+        "name": "Realizar Cadastro",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que eu acesso a página da aplicação",
+            "result": {
+              "duration": 1115000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "description": "",
+        "id": "cadastrar-usuario;editar-meu-cadastro-informando-nome-inválido",
+        "keyword": "Cenario",
+        "line": 35,
+        "name": "Editar meu cadastro informando nome inválido",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "line": 36,
+            "name": "ao editar eu informar o nome inválido",
+            "result": {
+              "duration": 5120000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "line": 37,
+            "name": "devo receber uma mensagem de erro no campo nome",
+            "result": {
+              "duration": 336000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "keyword": "Contexto",
+        "line": 8,
+        "name": "Realizar Cadastro",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que eu acesso a página da aplicação",
+            "result": {
+              "duration": 1088000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "description": "",
+        "id": "cadastrar-usuario;editar-meu-cadastro-informando-email-inválido",
+        "keyword": "Cenario",
+        "line": 39,
+        "name": "Editar meu cadastro informando email inválido",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "line": 40,
+            "name": "eu informar um email inválido ao editar o email",
+            "result": {
+              "duration": 4174000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "line": 41,
+            "name": "devo receber uma mensagem de erro",
+            "result": {
+              "duration": 168000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "keyword": "Contexto",
+        "line": 8,
+        "name": "Realizar Cadastro",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que eu acesso a página da aplicação",
+            "result": {
+              "duration": 1506000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "description": "",
+        "id": "cadastrar-usuario;editar-cadastro-informando-dados-válidos",
+        "keyword": "Cenario",
+        "line": 43,
+        "name": "Editar cadastro informando dados válidos",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "line": 44,
+            "name": "edito o cadastro informando meus novos dados",
+            "result": {
+              "duration": 7425000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "line": 45,
+            "name": "meus dados deverão ser atualizados com sucesso",
+            "result": {
+              "duration": 397000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "keyword": "Contexto",
+        "line": 8,
+        "name": "Realizar Cadastro",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que eu acesso a página da aplicação",
+            "result": {
+              "duration": 1160000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "description": "",
+        "id": "cadastrar-usuario;verificar-se-os-dados-foram-alterados-corretamente",
+        "keyword": "Cenario",
+        "line": 47,
+        "name": "Verificar se os dados foram alterados corretamente",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "line": 48,
+            "name": "eu acesso a lista de usuários cadastrados",
+            "result": {
+              "duration": 152000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "line": 49,
+            "name": "verifico se os meus dados foram alterados corretamente",
+            "result": {
+              "duration": 2540000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "keyword": "Contexto",
+        "line": 8,
+        "name": "Realizar Cadastro",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que eu acesso a página da aplicação",
+            "result": {
+              "duration": 1234000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "description": "",
+        "id": "cadastrar-usuario;apagar-cadastro",
+        "keyword": "Cenario",
+        "line": 51,
+        "name": "Apagar cadastro",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "line": 52,
+            "name": "realizo a exclusão do meu cadastro",
+            "result": {
+              "duration": 4036000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "line": 53,
+            "name": "recebo a mensagem que dizendo que meus dados foram excluído com sucesso",
+            "result": {
+              "duration": 512000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "keyword": "Contexto",
+        "line": 8,
+        "name": "Realizar Cadastro",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "que eu acesso a página da aplicação",
+            "result": {
+              "duration": 1702000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "description": "",
+        "id": "cadastrar-usuario;verificar-se-o-cadastro-foi-apagado",
+        "keyword": "Cenario",
+        "line": 55,
+        "name": "Verificar se o cadastro foi apagado",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "line": 56,
+            "name": "eu acesso a lista de usuários cadastrados",
+            "result": {
+              "duration": 108000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "line": 57,
+            "name": "verifico se o meu cadastro foi apagado corretamente.",
+            "result": {
+              "duration": 60000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "not available:0"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "cadastrar-usuario",
+    "keyword": "Funcionalidade",
+    "line": 3,
+    "name": "Cadastrar Usuario",
+    "uri": "cypress\\e2e\\features\\cadastro.feature"
+  }
+]
