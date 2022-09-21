@@ -1,6 +1,6 @@
 
 <h1 align="center">
-  <img src=".github/cypress_cucumber.png" width=25% alt="banner" />
+  <img src="github/cypress_cucumber.png" width=25% alt="banner" />
   </h1>
 
 <h2 align="center">
@@ -8,10 +8,10 @@
 </h2>
 
 <p align="center">
-<img alt="badge react" src=".github/badge-cypress.svg">
-<img alt="badge typescript" src=".github/badge-javascript.svg">
-<img alt="badge vite" src=".github/badge-node.svg">
-<img alt="badge figma" src=".github/badge-npm.svg">
+<img alt="badge react" src="github/badge-cypress.svg">
+<img alt="badge typescript" src="github/badge-javascript.svg">
+<img alt="badge vite" src="github/badge-node.svg">
+<img alt="badge figma" src="github/badge-npm.svg">
 </p>
 
 
@@ -40,11 +40,11 @@ Projeto realizado para vaga de QA na Ticto. Nesse teste, foi realizado o seguind
 ### 📸 Imagens
 
 **Relatório**
-<img src=".github/relatorio_cucumber_cypress.png" alt="Imagem do relatório Cucumber com Cypress" />
+<img src="github/relatorio_cucumber_cypress.png" alt="Imagem do relatório Cucumber com Cypress" />
 
 **Testes com Cypress**
 
-<img src=".github/teste_cypress.png" alt="Imagem dos testes com Cypress" />
+<img src="github/teste_cypress.png" alt="Imagem dos testes com Cypress" />
 
 ## 🧭 Como rodar o projeto
 
