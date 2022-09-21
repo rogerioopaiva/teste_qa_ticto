@@ -1,58 +1,63 @@
-<img src=".github/banner.png" alt="banner" />
+
+<h1 align="center">
+  <img src=".github/cypress_cucumber.png" width=25% alt="banner" />
+  </h1>
 
 <h2 align="center">
-   Nome Projeto | <img alt="badge rocketseat" align="center" src=".github/rocket.svg">
+  Teste QA Ticto
 </h2>
 
 <p align="center">
-<img alt="badge react" src=".github/badge-react.svg">
-<img alt="badge typescript" src=".github/badge-typescript.svg">
-<img alt="badge vscode" src=".github/badge-visual_studio_code.svg">
-<img alt="badge vite" src=".github/badge-vitejs.svg">
-<img alt="badge figma" src=".github/badge-figma.svg">
-<img alt="badge npm" src=".github/badge-npm.svg">
+<img alt="badge react" src=".github/badge-cypress.svg">
+<img alt="badge typescript" src=".github/badge-javascript.svg">
+<img alt="badge vite" src=".github/badge-node.svg">
+<img alt="badge figma" src=".github/badge-npm.svg">
 </p>
-![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
+
 
 <p align="center">
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-rodar-o-projeto">Como rodar o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 ## 💻 Projeto
 
-Este projeto foi um dos desafios_____. Nesse desafio, foi desenvolvido uma aplicação _____ **to-do list**, que contém as seguintes funcionalidades:
+Projeto realizado para vaga de QA na Ticto. Nesse teste, foi realizado o seguindo os seguintes critérios:
 
-- [x] Adicionar uma nova tarefa
-- [x] Marcar e desmarcar uma tarefa como concluída
-- [x] Remover uma tarefa da listagem
-- [x] Mostrar o progresso de conclusão das tarefas
+- [x] Verificar se a página foi carregada.
+- [x] Preencher nome, e-mail, e password inválidos e verifique a mensagem de erro.
+- [x] Preencha nome, email e pasword válidos e cadastre.
+- [x] Verificar se nome e e-mail foram os mesmos que você cadastrou.
+- [x] Editar nome e email(em ações), colocando inválidos e verifique a mensagem de erro.
+- [x] Preencha nome e e-mail válidos e confirme a edição.
+- [x] Verifique se nome e e-mail foram alterados corretamente no GRID.
+- [x] Apague o cadastro (em ações).
+- [x] Verifique se o cadastro foi apagado.
 
-Projeto foi hospedado na ___. Acesse o **___** desenvolvido [clicando aqui](https://url_da_hospedagem/).
+
 
 ### 📸 Imagens
 
-**Lista Preenchida**
-<img src=".github/ignite-todo-list-desktop.png" alt="página de histórico com a listagem dos pomodoros" />
+**Relatório**
+<img src=".github/relatorio_cucumber_cypress.png" alt="Imagem do relatório Cucumber com Cypress" />
 
-**Lista Vazia**
+**Testes com Cypress**
 
-<img src=".github/ignite-todo-empty.png" alt="página inicial do projeto Ignite Timer com pomodoro ligado" />
+<img src=".github/teste_cypress.png" alt="Imagem dos testes com Cypress" />
 
 ## 🧭 Como rodar o projeto
 
 **Clone este repositório**
 
 ```bash
-git clone https://github.com/.git
+git clone https://github.com/rogerioopaiva/teste_qa_ticto.git
 ```
 
 **Acesse a pasta**
 
 ```bash
-cd caminho da pasta
+cd caminho_da_pasta (onde o projeto foi clonado)
 ```
 
 **Instale as dependências**
@@ -64,14 +69,15 @@ npm install ou yarn install
 **Execute a aplicação**
 
 ```bash
-npm run____
+npm run cypress:run (para executar os testes)
+npm run reportcypress:run (para gerar o relatório)
 ```
 
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [ReactJS](https://pt-br.reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/pt/)
-- [Vite](https://vitejs.dev/)
+- [Cypress](https://www.cypress.io/)
+- [FakerJS](https://fakerjs.dev/guide/)
+- [Multiple Cucumber Html Reporter](https://www.npmjs.com/package/multiple-cucumber-html-reporter/)
 
