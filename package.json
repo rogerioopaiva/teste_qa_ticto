@@ -4,7 +4,9 @@
   "description": "Teste Analista QA da Ticto",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress open"
+    "test": "npx cypress open",
+    "cypress:run": "npx cypress run",
+    "reportcypress:run": "node ./cucumber-html-report.js"
   },
   "author": "Rogério Paiva",
   "license": "ISC",
