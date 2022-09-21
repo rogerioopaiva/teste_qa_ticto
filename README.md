@@ -72,6 +72,8 @@ npm install ou yarn install
 npm run cypress:run (para executar os testes)
 npm run reportcypress:run (para gerar o relatório)
 ```
+**Para visualizar o relatório depois dos testes acesse a pasta reports/cucumber-htmlreport.html e abra o index.html no navegador**
+
 
 ## 🚀 Tecnologias
 
