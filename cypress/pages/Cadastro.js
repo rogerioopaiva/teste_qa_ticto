@@ -4,37 +4,37 @@ let usuario = DadosFalso.usuario()
 
 class Cadastro {
 
-    navigateToPage() {
+    navegarParaPagina() {
         cy.visit('/')
     }
 
-    uploadPage() {
+    visualizarPagina() {
         cy.get('body').should('be.visible')
     }
 
-    findTitlePage() {
+    encontrarTituloDaPagina() {
         cy.get('.col-12 h1').first().should('have.text', 'Formulário')
     }
 
-    fillWithInvalidName() {
+    cadastrarComNomeInvalido() {
         cy.get('input[name="name"]').type(usuario.primeiroNome)
         cy.get('input[name="email"]').type(usuario.email)
         cy.get('input[name="password"]').type(usuario.senha)
         cy.get('form button[type="submit"]').click();
     }   
 
-    validateInvalidNameMessage() {
+    validarMensagemNomeInvalido() {
         cy.get('.text-danger').contains('Insira um Nome e Sobrenome válido.')
     }
 
     //Email invalido
-    fillWithInvalidEmail() {
+    cadastrarComEmailInvalido() {
         cy.get('input[name="name"]').type(usuario.nomeCompleto)
         cy.get('input[name="email"]').type(usuario.emailInvalido)
         cy.get('input[name="password"]').type(usuario.senha)
     } 
     
-    validateInvalidEmailMessage() {
+    validarMensagemEmailInvalido() {
             cy.get('form button[type="submit"]').click();
             cy.get('input[name="email"]').then(($input) => {
                 expect($input[0].validationMessage).to.eq('"." está sendo usado em uma posição incorreta em ".test.dev".')
@@ -43,42 +43,42 @@ class Cadastro {
 
         //Senha invalida
 
-        fillWithInvalidPassword() {
+        cadastrarComSenhaInvalida() {
             cy.get('input[name="name"]').type(usuario.nomeCompleto)
             cy.get('input[name="email"]').type(usuario.email)
             cy.get('input[name="password"]').type(usuario.senhaInvalida)
             cy.get('form button[type="submit"]').click();
         }
 
-        validateInvalidPasswordMessage() {
+        validarMensagemSenhaInvalida() {
             cy.get('.text-danger').contains('O campo Password deve ter no minimo 8 caracteres.')
         }
 
         //Instrução 2.1
         
-        fillWithDataValid() {
+        realizarCadastroValido() {
             cy.get('input[name="name"]').type(usuario.nomeCompleto)
             cy.get('input[name="email"]').type(usuario.email)
             cy.get('input[name="password"]').type(usuario.senha)
             cy.get('form button[type="submit"]').click();
         }
 
-        validateRegisterSuccessMessage() {
+        ValidarMensagemCadastroComSucesso() {
             cy.get('.alert-success').contains('Usuário cadastrado com sucesso.')
         }
 
          //Instrução 3
-        listUsersRegisterPage() {
+        validarTituloDaLista() {
             cy.get('.bg-gradient h1').last().should('have.text', 'Usuários cadastrados')
         }
 
-        validateDataEqualToRegistered() {
+        validarDadoIgualAoCadastrado() {
             cy.get('tr').should('contain', `${usuario.nomeCompleto}`)
             cy.get('tr').should('contain', `${usuario.email}`)
         }
 
         //Instrução 4
-        fillUpdateInvalidName() {
+        atualizarComNomeInvalido() {
             cy.get('.btn.btn-danger.dropdown-toggle').last().click()
             cy.get('.dropdown-menu.show').contains('Editar').click()
             cy.get('input[id^=e_name]').last().clear()
@@ -93,7 +93,7 @@ class Cadastro {
         }
 
 
-        fillUpdateInvalidEmail() {
+        atualizarComEmailInvalido() {
             cy.get('.btn.btn-danger.dropdown-toggle').last().click()
             cy.get('.dropdown-menu.show').contains('Editar').click()
             cy.get('input[id^=e_email]').last().clear()
@@ -107,14 +107,14 @@ class Cadastro {
             cy.get('button[form^=edit]').last().contains('Salvar').click();
         }
         
-        updateInvalidEmailMessage() {
+        validarMensagemEmailAtualizadoInvalido() {
             cy.get('input[id^="e_email"]').last().then(($input) => {
                 expect($input[0].validationMessage).to.eq('"." está sendo usado em uma posição incorreta em ".test.dev".')
             })
         }
 
         //Instrução 4.1
-        updateRegisteredData() {
+        atualizarDadoCadastrado() {
             cy.get('.btn.btn-danger.dropdown-toggle').last().click()
             cy.get('.dropdown-menu.show').contains('Editar').click()
             cy.get('input[id^=e_name]').last().clear()
@@ -130,29 +130,29 @@ class Cadastro {
             cy.get('button[form^=edit]').last().contains('Salvar').click();
         }
 
-        validateUpdateSuccessMessage() {
+        validarMensagemAtualizadoComSucesso() {
             cy.get('.alert-success').contains('Usuário salvo com sucesso.')
         }
 
         //Instrução 5
-        verifyDataUpdate() {
+        verificarDadoAtualizado() {
             cy.get('tr').contains(usuario.nomeCompleto)
             cy.get('tr').contains(usuario.email)
         }
 
         //Instrução 6
-        removeRegisterData() {
+        removerDadoCadastrado() {
             cy.get('.btn.btn-danger.dropdown-toggle').last().click()
             cy.get('.dropdown-menu.show').contains('Excluir').click()
             cy.get('button[type="submit"]').contains('Excluir').click({force: true})
         }
 
-        validateRemoveSuccessMessage() {
+        validarMesagemUsuarioRemovidoComSucesso() {
             cy.get('.alert-success').contains('Usuário removido com sucesso.')
         }
 
         //Instrução 7
-        verifyRegisterNotExist() {
+        verificarCadastroNaoExiste() {
             cy.get(usuario.nomeCompleto).should('not.exist')
         }
 

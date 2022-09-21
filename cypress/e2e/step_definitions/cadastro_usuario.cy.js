@@ -2,105 +2,105 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import cadastro from "../../pages/Cadastro"
 
 Given('que eu acesso a página da aplicação', () => {
-    cadastro.navigateToPage()
+    cadastro.navegarParaPagina()
 });
 
 When('a página estiver carregada', () => {
-    cadastro.uploadPage()
+    cadastro.visualizarPagina()
 });
 
 Then('devo ver o título do formulário', () => {
-    cadastro.findTitlePage()
+    cadastro.encontrarTituloDaPagina()
 });
 
 When('informo meu nome inválido', () => {
-    cadastro.fillWithInvalidName()
+    cadastro.cadastrarComNomeInvalido()
 });
 
 Then('devo receber uma mensagem de erro referente ao nome', () => {
-    cadastro.validateInvalidNameMessage()
+    cadastro.validarMensagemNomeInvalido()
 });
 
 When('informo meu email inválido', () => {
-    cadastro.fillWithInvalidEmail()
+    cadastro.cadastrarComEmailInvalido()
 });
 
 Then('devo receber uma mensagem de erro referente ao email', () => {
-    cadastro.validateInvalidEmailMessage()
+    cadastro.validarMensagemEmailInvalido()
 });
 
 When('informo minha senha inválida', () => {
-    cadastro.fillWithInvalidPassword()
+    cadastro.cadastrarComSenhaInvalida()
 });
 
 Then('devo receber uma mensagem de erro referente a senha', () => {
-    cadastro.validateInvalidPasswordMessage()
+    cadastro.validarMensagemSenhaInvalida()
 });
 
 //Instrução 2.1
 
 When('informo meus dados corretamente', () => {
-    cadastro.fillWithDataValid()
+    cadastro.realizarCadastroValido()
 });
 
 Then('meu cadastro deve ser realizado com sucesso', () => {
-    cadastro.validateRegisterSuccessMessage()
+    cadastro.ValidarMensagemCadastroComSucesso()
 });
 
 //Instrução 3
 
 When('acesso a área de usuários já cadastrados', () => {
-    cadastro.listUsersRegisterPage()
+    cadastro.validarTituloDaLista()
 });
 
 Then('devo conseguir localizar os dados que cadastrei', () => {
-    cadastro.validateDataEqualToRegistered()
+    cadastro.validarDadoIgualAoCadastrado()
 });
 
 //Instrução 4
 When('ao editar eu informar o nome inválido', () => {
-    cadastro.fillUpdateInvalidName()
+    cadastro.atualizarComNomeInvalido()
 });
 
 When('ao editar eu informar o email inválido', () => {
-    cadastro.fillUpdateInvalidEmail()
+    cadastro.atualizarComEmailInvalido()
 });
 
 When('devo receber uma mensagem de erro relacionado ao email', () => {
-    cadastro.updateInvalidEmailMessage()
+    cadastro.validarMensagemEmailAtualizadoInvalido()
 });
 
 //Instrução 4.1
 
 When('edito o meu cadastro informando novos dados', () => {
-    cadastro.updateRegisteredData()
+    cadastro.atualizarDadoCadastrado()
 });
 
 Then('meus dados deverão ser atualizados com sucesso', () => {
-    cadastro.validateUpdateSuccessMessage()
+    cadastro.validarMensagemAtualizadoComSucesso()
 });
 
 //Instrução 5
 
 When('eu acesso a lista de usuários cadastrados', () => {
-    cadastro.listUsersRegisterPage()
+    cadastro.validarTituloDaLista()
 });
 
 Then('verifico se os meus dados foram alterados corretamente', () => {
-    cadastro.verifyDataUpdate()
+    cadastro.verificarDadoAtualizado()
 });
 
 //Instrução 6
 
 When('realizo a exclusão do meu cadastro', () => {
-    cadastro.removeRegisterData()
+    cadastro.removerDadoCadastrado()
 });
 
 Then('recebo a mensagem que dizendo que meus dados foram excluído com sucesso', () => {
-    cadastro.validateRemoveSuccessMessage()
+    cadastro.validarMesagemUsuarioRemovidoComSucesso()
 });
 
 //Instrução 7
 Then('verifico se o meu cadastro foi apagado corretamente.', () => {
-    cadastro.verifyRegisterNotExist()
+    cadastro.verificarCadastroNaoExiste()
 });
