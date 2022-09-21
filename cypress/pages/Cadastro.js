@@ -1,10 +1,8 @@
-import DataFactory from "../e2e/factories/DataFactory"
+import DadosFalso from "../e2e/factories/DadosFalso"
 
-let register = DataFactory.register()
-let fullName = register.fullName
-let email = register.email
+let usuario = DadosFalso.usuario()
 
-class RegisterPage {
+class Cadastro {
 
     navigateToPage() {
         cy.visit('/')
@@ -19,9 +17,9 @@ class RegisterPage {
     }
 
     fillWithInvalidName() {
-        cy.get('input[name="name"]').type(register.firstName)
-        cy.get('input[name="email"]').type(email)
-        cy.get('input[name="password"]').type(register.password)
+        cy.get('input[name="name"]').type(usuario.primeiroNome)
+        cy.get('input[name="email"]').type(usuario.email)
+        cy.get('input[name="password"]').type(usuario.senha)
         cy.get('form button[type="submit"]').click();
     }   
 
@@ -31,9 +29,9 @@ class RegisterPage {
 
     //Email invalido
     fillWithInvalidEmail() {
-        cy.get('input[name="name"]').type(fullName)
-        cy.get('input[name="email"]').type(register.emailInvalid)
-        cy.get('input[name="password"]').type(register.password)
+        cy.get('input[name="name"]').type(usuario.nomeCompleto)
+        cy.get('input[name="email"]').type(usuario.emailInvalido)
+        cy.get('input[name="password"]').type(usuario.senha)
     } 
     
     validateInvalidEmailMessage() {
@@ -46,9 +44,9 @@ class RegisterPage {
         //Senha invalida
 
         fillWithInvalidPassword() {
-            cy.get('input[name="name"]').type('Alex Costa')
-            cy.get('input[name="email"]').type(`alex@teste.com`)
-            cy.get('input[name="password"]').type('senha')
+            cy.get('input[name="name"]').type(usuario.nomeCompleto)
+            cy.get('input[name="email"]').type(usuario.email)
+            cy.get('input[name="password"]').type(usuario.senhaInvalida)
             cy.get('form button[type="submit"]').click();
         }
 
@@ -59,9 +57,9 @@ class RegisterPage {
         //Instrução 2.1
         
         fillWithDataValid() {
-            cy.get('input[name="name"]').type(fullName)
-            cy.get('input[name="email"]').type(email)
-            cy.get('input[name="password"]').type(register.password)
+            cy.get('input[name="name"]').type(usuario.nomeCompleto)
+            cy.get('input[name="email"]').type(usuario.email)
+            cy.get('input[name="password"]').type(usuario.senha)
             cy.get('form button[type="submit"]').click();
         }
 
@@ -75,8 +73,8 @@ class RegisterPage {
         }
 
         validateDataEqualToRegistered() {
-            cy.get('tr').should('contain', `${fullName}`)
-            cy.get('tr').should('contain', `${email}`)
+            cy.get('tr').should('contain', `${usuario.nomeCompleto}`)
+            cy.get('tr').should('contain', `${usuario.email}`)
         }
 
         //Instrução 4
@@ -84,7 +82,7 @@ class RegisterPage {
             cy.get('.btn.btn-danger.dropdown-toggle').last().click()
             cy.get('.dropdown-menu.show').contains('Editar').click()
             cy.get('input[id^=e_name]').last().clear()
-            cy.get('input[id^=e_name]').last().type(register.firstName)
+            cy.get('input[id^=e_name]').last().type(usuario.primeiroNome)
             cy.on("uncaught:exception", (err, runnable) => {
                 if (err.message.includes("validateForm is not defined")) {
                     return false;
@@ -99,7 +97,7 @@ class RegisterPage {
             cy.get('.btn.btn-danger.dropdown-toggle').last().click()
             cy.get('.dropdown-menu.show').contains('Editar').click()
             cy.get('input[id^=e_email]').last().clear()
-            cy.get('input[id^=e_email]').last().type(register.emailInvalid)
+            cy.get('input[id^=e_email]').last().type(usuario.emailInvalido)
             cy.on("uncaught:exception", (err, runnable) => {
                 if (err.message.includes("validateForm is not defined")) {
                     return false;
@@ -120,9 +118,9 @@ class RegisterPage {
             cy.get('.btn.btn-danger.dropdown-toggle').last().click()
             cy.get('.dropdown-menu.show').contains('Editar').click()
             cy.get('input[id^=e_name]').last().clear()
-            cy.get('input[id^=e_name]').last().type(fullName)
+            cy.get('input[id^=e_name]').last().type(usuario.nomeCompleto)
             cy.get('input[id^=e_email]').last().clear()
-            cy.get('input[id^=e_email]').last().type(email)
+            cy.get('input[id^=e_email]').last().type(usuario.email)
             cy.on("uncaught:exception", (err, runnable) => {
                 if (err.message.includes("validateForm is not defined")) {
                     return false;
@@ -138,8 +136,8 @@ class RegisterPage {
 
         //Instrução 5
         verifyDataUpdate() {
-            cy.get('tr').contains(fullName)
-            cy.get('tr').contains(email)
+            cy.get('tr').contains(usuario.nomeCompleto)
+            cy.get('tr').contains(usuario.email)
         }
 
         //Instrução 6
@@ -155,11 +153,11 @@ class RegisterPage {
 
         //Instrução 7
         verifyRegisterNotExist() {
-            cy.get(fullName).should('not.exist')
+            cy.get(usuario.nomeCompleto).should('not.exist')
         }
 
 }
 
 
-export default new RegisterPage;
+export default new Cadastro;
 

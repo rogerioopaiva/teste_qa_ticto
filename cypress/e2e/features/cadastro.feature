@@ -13,18 +13,18 @@ Funcionalidade: Cadastrar Usuario
         Então devo ver o título do formulário
 
     Cenario: Tentar realizar cadastro com nome invalido
-        Quando informo o nome inválido
-        Então devo receber uma mensagem de erro no campo nome
+        Quando informo meu nome inválido
+        Então devo receber uma mensagem de erro referente ao nome
 
     Cenario: Tentar realizar cadastro com email invalido
-        Quando informo o email inválido
-        Então devo receber uma mensagem de erro no campo email
+        Quando informo meu email inválido
+        Então devo receber uma mensagem de erro referente ao email
 
     Cenario: Tentar realizar cadastro com senha invalida
-        Quando informo a senha inválida
-        Então devo receber uma mensagem de erro no campo senha
+        Quando informo minha senha inválida
+        Então devo receber uma mensagem de erro referente a senha
 
-    Cenario: Realizar cadastro 
+    Cenario: Realizar cadastro com sucesso
         Quando informo meus dados corretamente
         Então meu cadastro deve ser realizado com sucesso
 
@@ -34,14 +34,14 @@ Funcionalidade: Cadastrar Usuario
 
     Cenario: Editar meu cadastro informando nome inválido
         Quando ao editar eu informar o nome inválido
-        Então devo receber uma mensagem de erro no campo nome
+        Então devo receber uma mensagem de erro referente ao nome
     
     Cenario: Editar meu cadastro informando email inválido
-        Quando eu informar um email inválido ao editar o email
-        Então devo receber uma mensagem de erro
+        Quando ao editar eu informar o email inválido 
+        Então devo receber uma mensagem de erro relacionado ao email
 
     Cenario: Editar cadastro informando dados válidos
-        Quando edito o cadastro informando meus novos dados
+        Quando edito o meu cadastro informando novos dados
         Então meus dados deverão ser atualizados com sucesso
     
     Cenario: Verificar se os dados foram alterados corretamente

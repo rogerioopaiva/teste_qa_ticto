@@ -1,106 +1,106 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import registerPage from "../../pages/RegisterPage"
+import cadastro from "../../pages/Cadastro"
 
 Given('que eu acesso a página da aplicação', () => {
-    registerPage.navigateToPage()
+    cadastro.navigateToPage()
 });
 
 When('a página estiver carregada', () => {
-    registerPage.uploadPage()
+    cadastro.uploadPage()
 });
 
 Then('devo ver o título do formulário', () => {
-    registerPage.findTitlePage()
+    cadastro.findTitlePage()
 });
 
-When('informo o nome inválido', () => {
-    registerPage.fillWithInvalidName()
+When('informo meu nome inválido', () => {
+    cadastro.fillWithInvalidName()
 });
 
-Then('devo receber uma mensagem de erro no campo nome', () => {
-    registerPage.validateInvalidNameMessage()
+Then('devo receber uma mensagem de erro referente ao nome', () => {
+    cadastro.validateInvalidNameMessage()
 });
 
-When('informo o email inválido', () => {
-    registerPage.fillWithInvalidEmail()
+When('informo meu email inválido', () => {
+    cadastro.fillWithInvalidEmail()
 });
 
-Then('devo receber uma mensagem de erro no campo email', () => {
-    registerPage.validateInvalidEmailMessage()
+Then('devo receber uma mensagem de erro referente ao email', () => {
+    cadastro.validateInvalidEmailMessage()
 });
 
-When('informo a senha inválida', () => {
-    registerPage.fillWithInvalidPassword()
+When('informo minha senha inválida', () => {
+    cadastro.fillWithInvalidPassword()
 });
 
-Then('devo receber uma mensagem de erro no campo senha', () => {
-    registerPage.validateInvalidPasswordMessage()
+Then('devo receber uma mensagem de erro referente a senha', () => {
+    cadastro.validateInvalidPasswordMessage()
 });
 
 //Instrução 2.1
 
 When('informo meus dados corretamente', () => {
-    registerPage.fillWithDataValid()
+    cadastro.fillWithDataValid()
 });
 
 Then('meu cadastro deve ser realizado com sucesso', () => {
-    registerPage.validateRegisterSuccessMessage()
+    cadastro.validateRegisterSuccessMessage()
 });
 
 //Instrução 3
 
 When('acesso a área de usuários já cadastrados', () => {
-    registerPage.listUsersRegisterPage()
+    cadastro.listUsersRegisterPage()
 });
 
 Then('devo conseguir localizar os dados que cadastrei', () => {
-    registerPage.validateDataEqualToRegistered()
+    cadastro.validateDataEqualToRegistered()
 });
 
 //Instrução 4
 When('ao editar eu informar o nome inválido', () => {
-    registerPage.fillUpdateInvalidName()
+    cadastro.fillUpdateInvalidName()
 });
 
-When('eu informar um email inválido ao editar o email', () => {
-    registerPage.fillUpdateInvalidEmail()
+When('ao editar eu informar o email inválido', () => {
+    cadastro.fillUpdateInvalidEmail()
 });
 
-When('devo receber uma mensagem de erro', () => {
-    registerPage.updateInvalidEmailMessage()
+When('devo receber uma mensagem de erro relacionado ao email', () => {
+    cadastro.updateInvalidEmailMessage()
 });
 
 //Instrução 4.1
 
-When('edito o cadastro informando meus novos dados', () => {
-    registerPage.updateRegisteredData()
+When('edito o meu cadastro informando novos dados', () => {
+    cadastro.updateRegisteredData()
 });
 
 Then('meus dados deverão ser atualizados com sucesso', () => {
-    registerPage.validateUpdateSuccessMessage()
+    cadastro.validateUpdateSuccessMessage()
 });
 
 //Instrução 5
 
 When('eu acesso a lista de usuários cadastrados', () => {
-    registerPage.listUsersRegisterPage()
+    cadastro.listUsersRegisterPage()
 });
 
 Then('verifico se os meus dados foram alterados corretamente', () => {
-    registerPage.verifyDataUpdate()
+    cadastro.verifyDataUpdate()
 });
 
 //Instrução 6
 
 When('realizo a exclusão do meu cadastro', () => {
-    registerPage.removeRegisterData()
+    cadastro.removeRegisterData()
 });
 
 Then('recebo a mensagem que dizendo que meus dados foram excluído com sucesso', () => {
-    registerPage.validateRemoveSuccessMessage()
+    cadastro.validateRemoveSuccessMessage()
 });
 
 //Instrução 7
 Then('verifico se o meu cadastro foi apagado corretamente.', () => {
-    registerPage.verifyRegisterNotExist()
+    cadastro.verifyRegisterNotExist()
 });
