@@ -51,7 +51,7 @@ Projeto realizado para vaga de QA na Ticto. Nesse teste, foi realizado o seguind
 **Clone este repositório**
 
 ```bash
-git clone https://github.com/rogerioopaiva/teste_qa_ticto.git
+git clone https://github.com/rogerioopaiva/teste_qa_tictorogerioopaiva/teste_qa_ticto.git
 ```
 
 **Acesse a pasta**
