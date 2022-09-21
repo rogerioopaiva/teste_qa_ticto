@@ -52,8 +52,6 @@ class Cadastro {
             cy.screenshot({capture: 'runner'})
         }
 
-        //Senha invalida
-
         cadastrarComSenhaInvalida() {
             cy.get('input[name="name"]').type(usuario.nomeCompleto)
             cy.get('input[name="email"]').type(usuario.email)
@@ -66,8 +64,6 @@ class Cadastro {
             cy.get('.text-danger').contains('O campo Password deve ter no minimo 8 caracteres.')
             cy.screenshot({capture: 'runner'})
         }
-
-        //Instrução 2.1
         
         realizarCadastroValido() {
             cy.get('input[name="name"]').type(usuario.nomeCompleto)
@@ -82,7 +78,6 @@ class Cadastro {
             cy.screenshot({capture: 'runner'})
         }
 
-         //Instrução 3
         validarTituloDaLista() {
             cy.get('.bg-gradient h1').last().should('have.text', 'Usuários cadastrados')
             cy.screenshot({capture: 'runner'})
@@ -94,7 +89,6 @@ class Cadastro {
             cy.screenshot({capture: 'runner'})
         }
 
-        //Instrução 4
         atualizarComNomeInvalido() {
             cy.get('.btn.btn-danger.dropdown-toggle').last().click()
             cy.get('.dropdown-menu.show').contains('Editar').click()
@@ -109,7 +103,6 @@ class Cadastro {
             cy.get('button[form^=edit]').last().contains('Salvar').click();
             cy.screenshot({capture: 'runner'})
         }
-
 
         atualizarComEmailInvalido() {
             cy.get('.btn.btn-danger.dropdown-toggle').last().click()
@@ -133,7 +126,6 @@ class Cadastro {
             cy.screenshot({capture: 'runner'})
         }
 
-        //Instrução 4.1
         atualizarDadoCadastrado() {
             cy.get('.btn.btn-danger.dropdown-toggle').last().click()
             cy.get('.dropdown-menu.show').contains('Editar').click()
@@ -156,14 +148,12 @@ class Cadastro {
             cy.screenshot({capture: 'runner'})
         }
 
-        //Instrução 5
         verificarDadoAtualizado() {
             cy.get('tr').contains(usuario.nomeCompleto)
             cy.get('tr').contains(usuario.email)
             cy.screenshot({capture: 'runner'})
         }
 
-        //Instrução 6
         removerDadoCadastrado() {
             cy.get('.btn.btn-danger.dropdown-toggle').last().click()
             cy.get('.dropdown-menu.show').contains('Excluir').click()
@@ -176,7 +166,6 @@ class Cadastro {
             cy.screenshot({capture: 'runner'})
         }
 
-        //Instrução 7
         verificarCadastroNaoExiste() {
             cy.get(usuario.nomeCompleto).should('not.exist')
             cy.screenshot({capture: 'runner'})

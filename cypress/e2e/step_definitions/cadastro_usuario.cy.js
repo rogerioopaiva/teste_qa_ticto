@@ -5,7 +5,7 @@ Given('que eu acesso a página da aplicação', () => {
     cadastro.navegarParaPagina()
 });
 
-When('a página estiver carregada', () => {
+When('a página que estou aguardando estiver carregada', () => {
     cadastro.visualizarPagina()
 });
 
@@ -37,8 +37,6 @@ Then('devo receber uma mensagem de erro referente a senha', () => {
     cadastro.validarMensagemSenhaInvalida()
 });
 
-//Instrução 2.1
-
 When('informo meus dados corretamente', () => {
     cadastro.realizarCadastroValido()
 });
@@ -47,9 +45,7 @@ Then('meu cadastro deve ser realizado com sucesso', () => {
     cadastro.ValidarMensagemCadastroComSucesso()
 });
 
-//Instrução 3
-
-When('acesso a área de usuários já cadastrados', () => {
+When('eu acesso a área de usuários já cadastrados', () => {
     cadastro.validarTituloDaLista()
 });
 
@@ -57,7 +53,6 @@ Then('devo conseguir localizar os dados que cadastrei', () => {
     cadastro.validarDadoIgualAoCadastrado()
 });
 
-//Instrução 4
 When('ao editar eu informar o nome inválido', () => {
     cadastro.atualizarComNomeInvalido()
 });
@@ -70,8 +65,6 @@ When('devo receber uma mensagem de erro relacionado ao email', () => {
     cadastro.validarMensagemEmailAtualizadoInvalido()
 });
 
-//Instrução 4.1
-
 When('edito o meu cadastro informando novos dados', () => {
     cadastro.atualizarDadoCadastrado()
 });
@@ -79,8 +72,6 @@ When('edito o meu cadastro informando novos dados', () => {
 Then('meus dados deverão ser atualizados com sucesso', () => {
     cadastro.validarMensagemAtualizadoComSucesso()
 });
-
-//Instrução 5
 
 When('eu acesso a lista de usuários cadastrados', () => {
     cadastro.validarTituloDaLista()
@@ -90,8 +81,6 @@ Then('verifico se os meus dados foram alterados corretamente', () => {
     cadastro.verificarDadoAtualizado()
 });
 
-//Instrução 6
-
 When('realizo a exclusão do meu cadastro', () => {
     cadastro.removerDadoCadastrado()
 });
@@ -100,7 +89,6 @@ Then('recebo a mensagem que dizendo que meus dados foram excluído com sucesso',
     cadastro.validarMesagemUsuarioRemovidoComSucesso()
 });
 
-//Instrução 7
 Then('verifico se o meu cadastro foi apagado corretamente.', () => {
     cadastro.verificarCadastroNaoExiste()
 });

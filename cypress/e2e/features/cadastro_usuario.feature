@@ -9,7 +9,7 @@ Funcionalidade: Cadastrar Usuario
         Dado que eu acesso a página da aplicação
 
     Cenario: Verificar se a pagina foi carregada corretamente
-        Quando a página estiver carregada
+        Quando a página que estou aguardando estiver carregada
         Então devo ver o título do formulário
 
     Cenario: Tentar realizar cadastro com nome invalido
@@ -29,7 +29,7 @@ Funcionalidade: Cadastrar Usuario
         Então meu cadastro deve ser realizado com sucesso
 
     Cenario: Verificar se na lista contém os dados cadastrados
-        Quando acesso a área de usuários já cadastrados
+        Quando eu acesso a área de usuários já cadastrados
         Então devo conseguir localizar os dados que cadastrei
 
     Cenario: Editar meu cadastro informando nome inválido
@@ -52,6 +52,6 @@ Funcionalidade: Cadastrar Usuario
         Quando realizo a exclusão do meu cadastro
         Então recebo a mensagem que dizendo que meus dados foram excluído com sucesso
 
-    Cenario: Verificar se o cadastro foi apagado
+    Cenario: Verificar se o cadastro foi apagado corretamente
         Quando eu acesso a lista de usuários cadastrados
         Então verifico se o meu cadastro foi apagado corretamente.

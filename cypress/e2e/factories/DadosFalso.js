@@ -4,10 +4,12 @@ export default {
 
     usuario: function () {
 
+        // As varáveis abaixo foram criadas para manter os mesmos dados durante a execução dos testes.
+        // Caso contrário, não seria possível validar o nome gerando novo nome dinamicamente a cada cenário.
        
         let primeiroNome = faker.name.firstName()
         let segundoNome = faker.name.lastName()
-        let nomeCompleto = faker.name.fullName()
+        let nomeCompleto = `${primeiroNome} ${segundoNome}`
 
         let dado = {
             primeiroNome: primeiroNome,
